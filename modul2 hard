@@ -1,0 +1,18 @@
+import random
+
+def find_divisors_pairs(n):
+    pairs = []
+    for a in range(1, 21):
+        for b in range(1, 21):
+            sum_ab = a + b
+            if n % sum_ab == 0:
+                pairs.append((a, b))
+
+    return pairs
+n = random.randint(3, 20)
+print(f"Случайное число: {n}")
+
+result = find_divisors_pairs(n)
+print("Найденные пары:")
+for pair in result:
+    print(pair)
